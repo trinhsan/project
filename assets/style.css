@@ -1,0 +1,363 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;/* Xác định kích thước của phần tử bao gồm cả nội dung, phần đệm và viền */
+}
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main{
+
+}
+
+/* header */
+#header{
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+#header .logo{
+    height: 100%;
+}
+#header .actions{
+    margin: 0 25px;
+}
+#header .actions img{
+    margin: 0 10px;
+}
+#header .actions img:hover{
+    opacity: 0.5;
+}
+#header .actions a{
+    text-decoration: none;
+}
+#nav{
+    display: flex;
+    flex-grow: 1;/* Chiếm hết không gian */
+    justify-content: center;
+}
+
+#nav li{
+    margin: 0 25px;
+    list-style: none;
+}
+#nav li a{
+    text-decoration: none;
+    color: #766c6c;
+    font-size: 20px;
+}
+#nav li a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+
+/* banner */
+#banner {
+    padding-top: 50%;
+    background: url("/assets/banner.png");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+  
+#banner .box-left {
+    padding:150px 150px;
+    width: 50%;
+    position: absolute;
+    top: 0;
+}
+#banner .box-left Span:nth-last-child(1){
+    color: red;
+}
+#banner .box-left h2 {
+    font-size: 40px;
+    color: #fff;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink{
+    0%{
+        color: white;
+    }
+    33%{
+        color: yellow;
+    }
+    67%{
+        color: blue;
+    }
+    100%{
+        color: white;
+    }
+}
+
+
+
+#banner .box-left p {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+#banner .box-left button{
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 50px;
+    background-color: #1a1a1a;
+    border: none;
+    font-weight: bold;
+    border-radius: 20px;
+    color: #fff;
+    outline: none;
+    /* transition chuyển động mượt mà */
+    transition: 0.3s;
+    cursor: pointer;
+}
+#banner .box-left button:hover{
+    background-color: orange;
+}
+#banner .box-right{
+    display: flex;
+    top:0;
+    position: absolute;
+    right: 100px;
+    width: 50%;
+    padding:150px 150px;
+}
+#banner .box-right img{
+    border-radius: 25px;
+    margin-left: 30px;
+    animation: animation 3s infinite linear;
+}
+#banner .box-right img:nth-child(1){
+    animation-delay: 0.2s;
+}
+#banner .box-right img:nth-child(2){
+    animation-delay: 0.8s;
+}
+
+@keyframes animation{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+
+/* container */
+
+#container{
+    z-index: 1;
+}
+#container .container-section{
+    padding-top: 50px;
+    width: 100%;
+    text-align: center ;
+}
+#container .container-section h2{
+    font-size: 50px;
+    padding-bottom: 50px;
+    color: #766c6c;
+}
+
+
+
+
+.item{
+    margin-top: 50px;
+    display: inline-block;
+    padding: 0 30px;
+}
+
+.item img {
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.item img:hover {
+    transform: translateY(-10px);
+}
+
+
+.item .price{
+    margin-top: 15px;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+.item .name{
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.item .sale{
+    margin-top: 5px;
+    color: #766c6c;
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+
+
+.btn-detail,.btn-buy{
+    margin: 10px 0px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    background-color: yellow;
+    border-radius: 20px;
+}
+.btn-detail:hover{
+    background-color: aqua;
+}
+.btn-buy:hover{
+    background-color: red;
+}
+
+
+/* comment */
+
+
+#comment{
+    width: 100%;
+    height: 600px;
+}
+
+#comment h2{
+    text-align: center;
+    margin: 100px 0;
+    font-size: 50px;
+    color:#766c6c;
+}
+#comment-body{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 430px;
+    list-style: none;
+    overflow: hidden;
+}
+
+#list-comment{
+    width: 80%;
+    height: 80%;
+    list-style: none;
+    transition: 0.5s;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+#list-comment .item{
+    width: 100%;
+    height: 100%;
+    background-color: #362f2f;
+    border-radius: 20px;
+    padding-bottom: 50px;
+}
+
+#list-comment .item .avatar{
+    text-align: center;
+    margin-top: 10px;
+}
+#list-comment .item .avatar img{
+    margin-top: 50px;
+    border-radius: 50%;
+}
+
+#list-comment .item .stars{
+    display: flex;
+    margin: 5px auto;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+#list-comment .item .stars span{
+    margin: 5px 5px;
+}
+
+#list-comment .item .name{
+    margin-bottom: 30px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+#list-comment .item .text{
+    padding: 0 50px;
+    color: #fff;
+}
+
+
+/* footer */
+
+#footer{
+    width: 100%;
+    background-color: rgb(0, 0, 0,0.79);
+    height: 300px;
+    margin-top: 100px;
+    padding: 60px 60px;
+    display: flex;
+    justify-content: space-around;
+}
+#footer .box{
+    width: 250px;
+    color: #fff;
+}
+#footer .box .footer-content{
+    margin: 15px 0;
+}
+#footer .box .footer-content li{
+    padding: 10px 0;
+    list-style: none;
+}
+#footer .box .footer-content li a{
+    color: #766c6c;
+    text-decoration: none;
+}
+#footer .box .footer-content li a:hover{
+    color: aqua;
+}
+
+#footer .box form input{
+    margin: 30px 0px;
+    width: 300px;
+    height :40px;
+    font-size: 18px;
+    padding-left: 5px;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #1a91ec;
+    border-radius: 5px;
+}
+
+#footer .box form button{
+    background-color:#362f2f ;
+    color: #fff;
+    box-shadow: 5px 5px 4px rgb(0, 0, 0,0.25);
+    width: 160px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    border: 1px solid #1a91ec;
+    border-radius: 5px;
+}
+#footer .box form button:hover{
+    background-color: #766c6c;
+    color: #1a1a1a;
+    border-color: #fff;
+}
